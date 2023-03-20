@@ -19,7 +19,7 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={clsx(styles.someOtherButto, className)}
+      className={clsx(styles.somethingThatsNotCorrect, className)}
       onClick={onClick}
       style={{ backgroundColor }}
       {...HTMLAttributes}
