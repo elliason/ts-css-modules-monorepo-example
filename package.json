@@ -1,0 +1,25 @@
+{
+  "name": "@ts-css-modules-monorepo-example/root",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@media-factory-cz/prettier-config": "^1.0.3",
+    "@types/node": "^18.15.3",
+    "prettier": "^2.8.5",
+    "turbo": "^1.8.3"
+  }
+}

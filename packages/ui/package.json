@@ -1,0 +1,61 @@
+{
+  "name": "@ts-css-modules-monorepo-example/ui",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "lint": "pnpm run lint:styles:fix && pnpm run lint:scripts:fix && pnpm run lint:ts",
+    "lint:styles": "stylelint \"**/*.{css,scss,sass}\"",
+    "lint:styles:fix": "stylelint \"**/*.{css,scss,sass}\" --fix",
+    "lint:scripts": "eslint --ext .ts,.tsx,.js,.jsx,.mjs,.cjs",
+    "lint:scripts:fix": "eslint --ext .ts,.tsx,.js,.jsx,.mjs,.cjs --fix",
+    "lint:ts": "tsc --noEmit",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "coverage": "vitest run --coverage",
+    "dev": "concurrently \"pnpm dev:server\" \"pnpm dev:watch\"",
+    "dev:server": "vite --host",
+    "dev:watch": "vite build --watch --emptyOutDir false",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "comments": {
+    "dev:server": "Runs vite dev server with index.html as entrypoint"
+  },
+  "devDependencies": {
+    "@ts-css-modules-monorepo-example/eslint-config": "workspace:*",
+    "@ts-css-modules-monorepo-example/stylelint-config": "workspace:*",
+    "@ts-css-modules-monorepo-example/tsconfig": "workspace:*",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@total-typescript/ts-reset": "^0.3.7",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "concurrently": "^7.6.0",
+    "eslint": "^8.35.0",
+    "jsdom": "^21.1.0",
+    "sass": "^1.58.3",
+    "stylelint": "^15.2.0",
+    "typescript": "^5.0.2",
+    "typescript-plugin-css-modules": "^4.2.3",
+    "vite": "^4.1.0",
+    "vite-plugin-dts": "^2.0.2",
+    "vitest": "^0.29.1"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

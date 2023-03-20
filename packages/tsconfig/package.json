@@ -1,0 +1,13 @@
+{
+  "name": "@ts-css-modules-monorepo-example/tsconfig",
+  "version": "0.0.1",
+  "private": true,
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react-library.json"
+  ],
+  "dependencies": {
+    "@media-factory-cz/typescript-config": "^1.0.4"
+  }
+}
